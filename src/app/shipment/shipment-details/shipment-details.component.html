@@ -9,7 +9,7 @@
                         <button class="btn btn-primary" type="button" (click)="onClose()">Close</button>
                     </div>
 
-                    <div class="row card-body">
+                    <div class="row card-body bg-gradient">
                         <div class="col" *ngFor="let shipment of shipments">
                             <p class="badge bg-warning text-dark">{{ shipment?.Status }}</p>
                             <p><strong>Shipment Number:</strong> <br>{{ shipment?.ShipmentNo }}</p>
