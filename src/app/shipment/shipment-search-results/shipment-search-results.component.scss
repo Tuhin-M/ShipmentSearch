@@ -1,0 +1,27 @@
+.container {
+    max-width: 960px;
+  }
+  
+  .search-results {
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+  }
+  
+  table {
+    /* Table styles can be customized here */
+    padding: auto;
+  }
+  
+  .search-results::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .search-results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .search-results::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 5px;
+  }
+  

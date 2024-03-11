@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mt-4 mb-2" *ngFor="let shipment of shipments">
+        <h3 class="me-auto">Shipment search results (101 results)</h3>
+        <button type="button" class="btn btn-primary" (click)="onClose()">Close</button>
+    </div>
+
+    <div class="row card">
+        <div class="card-body">
+            <div class="col" *ngFor="let shipment of shipments">
+                <p>{{ shipment.OrderNo }}</p>
+                <p>{{ shipment.ShipmentLines.TotalNumberOfRecords }} products</p>
+                <p>Carrier: {{ shipment.ScacAndService }}</p>
+                <p>Shipment #
+                    <a href="/shipments/search-details">{{ shipment.ShipmentNo }}</a>
+                </p>
+            </div>
+            <div class="col" *ngFor="let shipment of shipments">
+                <p>{{ shipment.Status }}</p>
+                <p>Assigned to: {{ shipment.AssignedToUserId }}</p>
+                <p>{{ shipment.ExpectedShipmentDate }}</p>
+            </div>
+            <div class="col" *ngFor="let shipment of shipments">
+                <p><b>Customer Info</b></p>
+                <p>{{ shipment.BillToAddress.FirstName }} {{ shipment.BillToAddress.LastName }}</p>
+                <p>{{ shipment.BillToAddress.DayPhone }}</p>
+                <p>{{ shipment.BillToAddress.EMailID }}</p>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col mt-4">
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h3 class="me-auto">Shipment Details (LOWSHP004)</h3>
+                        <button class="btn btn-primary" type="button" (click)="onClose()">Close</button>
+                    </div>
+
+                    <div class="row card-body">
+                        <div class="col" *ngFor="let shipment of shipments">
+                            <p class="badge bg-warning text-dark">{{ shipment?.Status }}</p>
+                            <p><strong>Shipment Number:</strong> <br>{{ shipment?.ShipmentNo }}</p>
+                            <p><strong>Carrier:</strong> <br>{{ shipment?.ScacAndService }}</p>
+                            <p><strong>Assigned To:</strong><br> {{ shipment?.AssignedToUserId }}</p>
+                            <p><strong>Ship To:</strong><br> {{ shipment?.ToAddress?.FirstName }} {{
+                                shipment?.ToAddress?.LastName }} <br> {{ shipment?.ToAddress?.AddressLine1 }}, {{
+                                shipment?.ToAddress?.AddressLine2 }} <br>
+                                {{ shipment?.ToAddress?.City }}, {{ shipment?.ToAddress?.State }}, {{
+                                shipment?.ToAddress?.ZipCode }} <br> {{ shipment?.ToAddress?.Country }} </p>
+                        </div>
+                        <div class="col" *ngFor="let shipment of shipments">
+                            <p><strong>Expected Ship Date:</strong> <br>
+                                {{ shipment?.ExpectedShipmentDate | date:'m'}}</p>
+                            <p><strong>Customer info:</strong><br> {{ shipment?.BillToAddress?.FirstName }} {{
+                                shipment?.BillToAddress?.LastName }} <br> {{ shipment?.BillToAddress?.Phonenumber }}
+                                <br> {{ shipment?.BillToAddress?.EmailID }}
+                            </p>
+                            <p><strong>Bill To:</strong><br> {{ shipment?.BillToAddress?.FirstName }} {{
+                                shipment?.BillToAddress?.LastName }} <br> {{ shipment?.BillToAddress?.AddressLine1 }},
+                                {{
+                                shipment?.BillToAddress?.AddressLine2 }} <br>
+                                {{ shipment?.BillToAddress?.City }}, {{ shipment?.BillToAddress?.State }}, {{
+                                shipment?.BillToAddress?.ZipCode }} <br> {{ shipment?.ToAddress?.Country }} </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- <div class="col">
+
+            </div> -->
+        </div>
+
+
+    </div>
+
+</div>

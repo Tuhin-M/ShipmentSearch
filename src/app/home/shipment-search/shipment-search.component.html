@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="text-center mt-5">
+        <h2 class="text-center mb-12">What do you want to do?</h2>
+    </div>
+    <div class="search-wrapper d-flex justify-content-center mt-5">
+        <div class="card shadow-sm p-4">
+
+            <h3 class="card-text text-center mb-4">Shipment Search</h3>
+
+            <form class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="orderNumber" class="form-label">Order #</label>
+                    <input type="text" class="form-control" id="orderNumber" placeholder="Enter Order Number">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="shipmentNumber" class="form-label">Shipment #</label>
+                    <input type="text" class="form-control" id="shipmentNumber" placeholder="Enter Shipment Number">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="emailId" class="form-label">Email ID</label>
+                    <input type="text" class="form-control" id="emailId" placeholder="Enter Email ID">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="phoneNo" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNo" placeholder="Enter Phone Number">
+                </div>
+            </form>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-primary me-md-2" type="button">Reset</button>
+                <button class="btn btn-primary" type="button" (click)="onSearch()">Search</button>
+            </div>
+        </div>
+
+    </div>
+</div>
